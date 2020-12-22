@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hangman.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Type a letter</p>
+    
+    <div class="game-container">
+        <!-- Rod figure -->
+        <svg height="250" width="200" class="figure-container">
+            <line x1="60"   y1="20"     x2="140"    y2="20"     />
+            <line x1="140"  y1="20"     x2="140"    y2="40"     />
+            <line x1="60"   y1="20"     x2="65"     y2="210"    />
+            <line x1="30"   y1="210"    x2="100"    y2="210"    />
+        
+        <!-- Head -->
+        <circle cx="140" cy="55" r="15" class="figure-part"/>
+
+        <!-- Body -->
+        <line x1="140" y1="71" x2="140" y2="140" class="figure-part"/>
+
+        <!-- Arms -->
+        <line x1="140" y1="100" x2="170" y2="70" class="figure-part"/>
+        <line x1="140" y1="100" x2="110" y2="70" class="figure-part"/>
+
+         <!-- Legs -->
+         <line x1="140" y1="140" x2="170" y2="180" class="figure-part"/>
+         <line x1="140" y1="140" x2="110" y2="180" class="figure-part"/>
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+                <!--<p>Wrong</p>
+                <span>e,r,t,y</span>-->
+            </div>
+        </div>
+
+        <div class="word" id="word">
+            <!--<div class="letter">h</div>-->
+           
+        </div>
+
+        <!-- Container for final message -->
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+                <h2 id="final-message">You have won</h2>
+                <button id="play-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-container show" id="notification-container">
+        <p>You have already entered this letter</p>
+    </div>
+    <script src="hangman.js"></script>
+</body>
+</html>
